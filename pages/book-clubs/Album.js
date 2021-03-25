@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import { withStyles } from "@material-ui/core/styles";
 
 function Copyright() {
     return (
@@ -61,18 +62,25 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+const SparkTextTypography = withStyles({
+    root: {
+        color: "#283149"
+    }
+})(Typography);
+
 export default function Album() {
     const classes = useStyles();
 
     return (
         <React.Fragment>
             <CssBaseline />
-            <AppBar position="relative">
+            <AppBar position="sticky" style={{ background: '#dbedf3' }}>
                 <Toolbar>
-                    <CameraIcon className={classes.icon} />
-                    <Typography variant="h6" color="inherit" noWrap>
-                        SparkRead
-                    </Typography>
+                    {/*<CameraIcon className={classes.icon} />*/}
+                    <SparkTextTypography variant="h6" noWrap>
+                        <b>SparkRead</b>
+                    </SparkTextTypography>
+
                 </Toolbar>
             </AppBar>
             <main>
@@ -89,9 +97,10 @@ export default function Album() {
                             SparkRead
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Something short and leading about the collection below—its contents,
-                            the creator, etc. Make it short and sweet, but not too short so folks
-                            don&apos;t simply skip over it entirely.
+                            Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
+                        </Typography>
+                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
+                            Присоединяйся к книжным клубам, находи единомышленников или развивай своё сообщество.
                         </Typography>
                         <div className={classes.heroButtons}>
                             <Grid container spacing={2} justifyContent="center">

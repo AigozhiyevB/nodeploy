@@ -15,6 +15,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import { withStyles } from "@material-ui/core/styles";
 import { positions } from '@material-ui/system';
+import Icon from '@material-ui/core/Icon';
 
 function Copyright() {
     return (
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
         marginRight: theme.spacing(2),
     },
     heroContent: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: '#dbedf3',
         padding: theme.spacing(8, 0, 6),
     },
     heroButtons: {
@@ -56,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     footer: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: '#dbedf3',
         padding: theme.spacing(6),
     },
 }));
@@ -81,7 +82,15 @@ export default function Album() {
                     <SparkTextTypography style={{color: '#283149'}} variant="h6" noWrap>
                         <b>SparkRead</b>
                     </SparkTextTypography>
-                    <Button position='right' color="inherit" style={{color: '#283149'}}>About Us</Button>
+
+                    <Button edge="end" color="inherit" style={{color: '#283149'}} >About Us</Button>
+
+                    <Button
+                        className={classes.button}
+                        endIcon={<Icon>send</Icon>}
+                    >
+                        Channel
+                    </Button>
                 </Toolbar>
             </AppBar>
             <main>

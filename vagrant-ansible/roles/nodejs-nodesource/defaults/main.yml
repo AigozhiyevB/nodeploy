@@ -1,0 +1,5 @@
+---
+nodesource_version: 14
+nodesource_packages:
+  - nodejs
+nodesource_packages_state: present

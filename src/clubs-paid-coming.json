@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Литкафе «Ближе к тексту»",
+    "address": "г. Санкт-Петербург, Бары Питера (и иногда онлайн)",
+    "link": "https://t.me/sparkread/61",
+    "meeting_date": "03-04-2021",
+    "book": "Рассказ мы выберем совместно с участниками: читаем все вместе на встрече",
+    "price": "800 руб",
+    "image": "https://sun9-35.userapi.com/impg/eL_gG30QBT0nLD6vcEjWMeN6EP0pFx8NIjjskw/An7WFnEy7nc.jpg?size=483x483&quality=96&sign=3cd917b4ea7511e208a49692a38e8289&type=album"
+  },
+  {
+    "name": "Books Events",
+    "address": "г. Москва, Кафе и антикафе в центре",
+    "link": "https://t.me/sparkread/35",
+    "meeting_date": "11-04-2021",
+    "book": "Цитадель",
+    "price": "500 рублей; для обладателей карточек Books Events — 350 рублей",
+    "image": "https://sun9-68.userapi.com/impf/c831109/v831109346/756d3/TGW5tt31Zs4.jpg?size=600x600&quality=96&sign=3cf6980e49be5678d40874c064285ce8&type=album"
+  },
+  {
+    "name": "Книжная среда",
+    "address": "ZOOM",
+    "link": "https://t.me/sparkread/60",
+    "meeting_date": "13-04-2021",
+    "book": "Непосредственный человек",
+    "price": "200 рублей",
+    "image": "https://sun9-53.userapi.com/impf/c850432/v850432537/cbdc8/l3sgNlXHTpM.jpg?size=640x640&quality=96&sign=240743be71e867a942d1cdd9fc34c9ee&type=album"
+  },
+  {
+    "name": "Книголюбы",
+    "address": "г. Железнодорожный, Московской области\n",
+    "link": "https://t.me/sparkread/64",
+    "meeting_date": "23-04-2021 18:00",
+    "book": "Оправдание острова",
+    "price": "300 руб",
+    "image": "https://sun9-59.userapi.com/impg/c855420/v855420254/17ed52/6IVYiaZDyKs.jpg?size=600x900&quality=96&sign=03126e34a53131592a78a63b5ca45086&type=album"
+  },
+  {
+    "name": "#mojsovremennik",
+    "address": "ZOOM",
+    "link": "https://t.me/sparkread/63",
+    "meeting_date": "25-04-2021",
+    "book": "Ромео и Джульетта, Гринев и Маша. Могли бы подростки сегодня с ними подружиться?",
+    "price": "5 евро отдельная лекция. 20 евро 6 лекций",
+    "image": "https://scontent.frix2-1.fna.fbcdn.net/v/t31.18172-8/21752570_10212832104151165_4086133461858407867_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=825194&_nc_eui2=AeGHfDqBZnB60GpACVFDPlr5PP3NRI49v4Y8_c1Ejj2_hr9_zN3kJR5j9Xgt7gdsGV38vlubSe7mS4XOlZN_Elrb&_nc_ohc=ZZQCISCw07QAX-zZpWF&_nc_oc=AQljsIXeA9DpyATFqdYmGZK09r99yUOOFOCHjrib1wzTC8xVk8tCssIrC6xeKfUJY7Q&_nc_ht=scontent.frix2-1.fna&oh=23459fa0948fa570847fdff190e471d9&oe=608A9FB0"
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Bauman Reading Club",
+    "address": "г. Москва, 502 комната библиотеки им. Н.А. Некрасова по адресу: ул. Бауманская, д. 58/25, стр. 14",
+    "link": "https://t.me/sparkread/29",
+    "meeting_date": "03-04-2021",
+    "book": "S.N.A.F.F.",
+    "price": "Бесплатно",
+    "image": "https://sun9-19.userapi.com/impf/c851428/v851428839/1770e1/ZHizc4FSF6c.jpg?size=1178x1492&quality=96&sign=0e9d1939d996e8966394b7acbbf417f0&type=album"
+  },
+  {
+    "name": "Литкафе «Ближе к тексту»",
+    "address": "г. Санкт-Петербург, Бары Питера (и иногда онлайн)",
+    "link": "https://t.me/sparkread/61",
+    "meeting_date": "03-04-2021",
+    "book": "Рассказ мы выберем совместно с участниками: читаем все вместе на встрече",
+    "price": "800 руб",
+    "image": "https://sun9-35.userapi.com/impg/eL_gG30QBT0nLD6vcEjWMeN6EP0pFx8NIjjskw/An7WFnEy7nc.jpg?size=483x483&quality=96&sign=3cd917b4ea7511e208a49692a38e8289&type=album"
+  },
+  {
+    "name": "Иначе Говоря",
+    "address": "г. Набережные Челны, КОП \"Метро\"",
+    "link": "https://t.me/sparkread",
+    "meeting_date": "07-04-2021 18:00",
+    "book": "Пятьдесят лет любви",
+    "price": "Бесплатно",
+    "image": "https://sun9-14.userapi.com/impf/c824600/v824600190/137fb9/maJeUPX4hUU.jpg?size=653x770&quality=96&sign=20b759596ba6a000f38f0178bee2fddd&type=album"
+  },
+  {
+    "name": "Books Events",
+    "address": "г. Москва, Кафе и антикафе в центре",
+    "link": "https://t.me/sparkread/35",
+    "meeting_date": "11-04-2021",
+    "book": "Цитадель",
+    "price": "500 рублей; для обладателей карточек Books Events — 350 рублей",
+    "image": "https://sun9-68.userapi.com/impf/c831109/v831109346/756d3/TGW5tt31Zs4.jpg?size=600x600&quality=96&sign=3cf6980e49be5678d40874c064285ce8&type=album"
+  },
+  {
+    "name": "Премиальная литература",
+    "address": "г. Екатеринбург, Книжный магазин \"Пиотровский\" в Ельцин-центре",
+    "link": "https://t.me/sparkread/59",
+    "meeting_date": "13-04-2021 18:00",
+    "book": "ВонгОзеро\nНепосредственный человек\nОливия Киттеридж",
+    "price": "Бесплатно",
+    "image": "https://sun9-55.userapi.com/impg/c850416/v850416851/15c9cf/nHi-C0jdXAM.jpg?size=1200x750&quality=96&sign=7a3308d4da9c9a225ad1523d70656275&type=album"
+  },
+  {
+    "name": "Cover by Cover",
+    "address": "г. Москва, место встречи объявляется накануне",
+    "link": "https://t.me/sparkread/34",
+    "meeting_date": "14-04-2021",
+    "book": "Договориться можно обо всем",
+    "image": "https://sun9-40.userapi.com/impg/Dn26HyjK-TcfDlZREXZFmqGRQ2-yBMHrotVPtg/nAQpxlZq0SQ.jpg?size=1024x683&quality=96&sign=a1f098e56d2ab8e90f177d4dd66c1283&type=album"
+  },
+  {
+    "name": "Книголюбы",
+    "address": "г. Железнодорожный, Московской области\n",
+    "link": "https://t.me/sparkread/64",
+    "meeting_date": "23-04-2021 18:00",
+    "book": "Оправдание острова",
+    "price": "300 руб",
+    "image": "https://sun9-59.userapi.com/impg/c855420/v855420254/17ed52/6IVYiaZDyKs.jpg?size=600x900&quality=96&sign=03126e34a53131592a78a63b5ca45086&type=album"
+  }
+]

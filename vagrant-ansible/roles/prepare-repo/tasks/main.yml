@@ -1,0 +1,17 @@
+---
+
+- name: Ensure Git is installed
+  apt:
+    name: git
+    state: present
+
+- name: Clone source repo
+  git:
+    repo: '{{ preprepo_url }}'
+    version: '{{ preprepo_branch }}'
+    dest: '{{ preprepo_dest }}'
+
+- name: Fetch dependencies
+  npm:
+    path: '{{ preprepo_dest }}'
+    state: present

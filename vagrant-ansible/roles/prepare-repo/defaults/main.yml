@@ -1,0 +1,4 @@
+---
+preprepo_url: 'https://github.com/SparkRead/nodeploy'
+preprepo_branch: 'main'
+preprepo_dest: '{{ ansible_env.HOME }}/nodeploy'

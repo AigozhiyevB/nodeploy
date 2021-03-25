@@ -14,6 +14,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import { withStyles } from "@material-ui/core/styles";
+import { positions } from '@material-ui/system';
 
 function Copyright() {
     return (
@@ -77,10 +78,10 @@ export default function Album() {
             <AppBar position="sticky" style={{ background: '#dbedf3' }}>
                 <Toolbar>
                     {/*<CameraIcon className={classes.icon} />*/}
-                    <SparkTextTypography variant="h6" noWrap>
+                    <SparkTextTypography style={{color: '#283149'}} variant="h6" noWrap>
                         <b>SparkRead</b>
                     </SparkTextTypography>
-
+                    <Button position='right' color="inherit" style={{color: '#283149'}}>About Us</Button>
                 </Toolbar>
             </AppBar>
             <main>

@@ -71,7 +71,7 @@ export default function Album() {
                 <Toolbar>
                     <CameraIcon className={classes.icon} />
                     <Typography variant="h6" color="inherit" noWrap>
-                        Album layout
+                        SparkRead
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -86,7 +86,7 @@ export default function Album() {
                             color="textPrimary"
                             gutterBottom
                         >
-                            Album layout
+                            SparkRead
                         </Typography>
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
                             Something short and leading about the collection below—its contents,
@@ -138,7 +138,7 @@ export default function Album() {
             {/* Footer */}
             <footer className={classes.footer}>
                 <Typography variant="h6" align="center" gutterBottom>
-                    Footer
+                    About us
                 </Typography>
                 <Typography
                     variant="subtitle1"

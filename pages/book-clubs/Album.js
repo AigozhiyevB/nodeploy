@@ -15,7 +15,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import { withStyles } from "@material-ui/core/styles";
 import { positions } from '@material-ui/system';
-import Icon from '@material-ui/core/Icon';
+import SendIcon from '@material-ui/icons/Send';
 
 function Copyright() {
     return (
@@ -87,7 +87,7 @@ export default function Album() {
 
                     <Button
                         className={classes.button}
-                        endIcon={<Icon>send</Icon>}
+                        endIcon={<SendIcon />}
                     >
                         Channel
                     </Button>

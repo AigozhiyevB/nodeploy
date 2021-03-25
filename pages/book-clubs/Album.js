@@ -77,20 +77,22 @@ export default function Album() {
         <React.Fragment>
             <CssBaseline />
             <AppBar position="sticky" style={{ background: '#dbedf3' }}>
-                <Toolbar>
-                    {/*<CameraIcon className={classes.icon} />*/}
-                    <SparkTextTypography style={{color: '#283149'}} variant="h6" noWrap>
-                        <b>SparkRead</b>
-                    </SparkTextTypography>
-
-                    <Button edge="end" color="inherit" style={{color: '#283149'}} >About Us</Button>
-
-                    <Button
-                        className={classes.button}
-                        endIcon={<SendIcon />}
-                    >
-                        Channel
-                    </Button>
+                <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                    <div>
+                    	<SparkTextTypography style={{color: '#283149'}} variant="h6" noWrap>
+                        	<b>SparkRead</b>
+                    	</SparkTextTypography>
+                    </div>
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                    	<Button className={classes.button} color="inherit" style={{color: '#283149'}}>About Us</Button>
+                    	
+                    	<Button
+                        	className={classes.button}
+                        	endIcon={<SendIcon />}
+                    	>
+                        	Channel
+                    	</Button>
+        			</div>
                 </Toolbar>
             </AppBar>
             <main>
@@ -112,16 +114,6 @@ export default function Album() {
                         <Typography variant="h5" align="center" color="textSecondary" paragraph>
                             Присоединяйся к книжным клубам, находи единомышленников или развивай своё сообщество.
                         </Typography>
-                        <div className={classes.heroButtons}>
-                            <Grid container spacing={2} justifyContent="center">
-                                <Grid item>
-                                    <Button variant="contained">Main call to action</Button>
-                                </Grid>
-                                <Grid item>
-                                    <Button variant="outlined">Secondary action</Button>
-                                </Grid>
-                            </Grid>
-                        </div>
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">

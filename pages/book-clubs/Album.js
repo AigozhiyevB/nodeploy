@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '56.25%', // 16:9
     },
     cardContent: {
+    	alignItems: 'center',
         flexGrow: 1,
     },
     footer: {
@@ -72,7 +73,14 @@ const SparkTextTypography = withStyles({
 
 export default function Album() {
     const classes = useStyles();
-
+    
+	const clubs = require("../../src/clubs.json");
+	
+	// DEBUG
+	/*for (const i of clubs) {
+		console.log(i);
+	}*/
+	
     return (
         <React.Fragment>
             <CssBaseline />
@@ -117,28 +125,38 @@ export default function Album() {
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
-                    {/* End hero unit */}
                     <Grid container spacing={4}>
-                        {cards.map((card) => (
-                            <Grid item key={card} xs={12} sm={6} md={4}>
-                                <Card className={classes.card}>
+                        {clubs.map((club) => (
+                            <Grid item key={club} xs={12} sm={6} md={4}>
+                                <Card className={classes.card} >
                                     <CardMedia
                                         className={classes.cardMedia}
-                                        image="https://source.unsplash.com/random"
-                                        title="Image title"
+                                        image={club.image}
+                                        title={club.name}
                                     />
-                                    <CardContent className={classes.cardContent}>
-                                        <Typography gutterBottom variant="h5" component="h2">
-                                            Heading
+                                    <CardContent className={classes.cardContent} >
+                                        <Typography gutterBottom variant="h4" component="h2" style={{ textAlign: 'center' }} >
+                                            {club.name}
                                         </Typography>
                                         <Typography>
-                                            This is a media card. You can use this section to describe the
-                                            content.
+                                            <b>{`Адрес: `}</b> {club.address}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Стоимость: `}</b> {club.price}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Дата встречи: `}</b> {club.meeting_date}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Текущая книга: `}</b> {club.book}
                                         </Typography>
                                     </CardContent>
-                                    <CardActions>
-                                        <Button size="small">View</Button>
-                                        <Button size="small">Edit</Button>
+                                    <CardActions style={{ alignItems: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
+                                        <Button variant="outlined" size="medium">
+                    						<Link href={club.link}>
+                    							View
+                    						</Link>
+                						</Button>
                                     </CardActions>
                                 </Card>
                             </Grid>

@@ -16,8 +16,9 @@ import Link from '@material-ui/core/Link';
 import { withStyles } from "@material-ui/core/styles";
 import { borders } from '@material-ui/system';
 import SendIcon from '@material-ui/icons/Send';
+import clubs from '../../src/clubs.json'
+import team from '../../src/team.json'
 
-//window.location.reload(false);
 
 function Copyright() {
     return (
@@ -74,7 +75,7 @@ const aboutStyle = makeStyles((theme) => ({
     cardGrid: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-
+        alignItems: 'stretch',
     },
     card: {
         height: '100%',
@@ -92,8 +93,6 @@ const aboutStyle = makeStyles((theme) => ({
     },
 }));
 
-const clubs = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 const SparkTextTypography = withStyles({
     root: {
         color: "#283149"
@@ -103,8 +102,6 @@ const SparkTextTypography = withStyles({
 export default function Album() {
     const classes = useStyles();
     const about = aboutStyle();
-    const clubs = require("../../src/clubs.json");
-    const team = require("../../src/team.json");
 
     return (
         <React.Fragment>
@@ -202,7 +199,7 @@ export default function Album() {
                     {/* End hero unit */}
                     <Grid container spacing={4}
                           justify="center"
-                          alignItems="center">
+                          alignItems="stretch">
                         {team.map((team) => (
                             <Grid item key={team} xs={12} sm={6} md={3}>
                                 <Card className={about.card}>

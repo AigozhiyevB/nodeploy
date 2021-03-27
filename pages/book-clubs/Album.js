@@ -114,17 +114,33 @@ export default function Album() {
                     	</SparkTextTypography>
                     </div>
                     <div style={{display: 'flex', alignItems: 'center'}}>
-                    	<Button className={classes.button} color="inherit" style={{color: '#283149'}} href="#About">
-                            About Us
-                    	</Button>
-                    	
-                    	<Button
-                        	className={classes.button}
-                        	endIcon={<SendIcon />}
-                            href='https://t.me/sparkread'
-                    	>
-                        	Channel
-                    	</Button>
+                    	<Grid container spacing={1}>
+  							<Grid item>
+  								<Link href="#About" style={{ textDecoration: 'none' }}>
+    								<Button
+                    					className={classes.button}
+                    					color="inherit"
+                    					style={{color: '#283149'}}
+                    					variant="outlined"
+                    				>
+                    					About Us
+                    				</Button>
+                    			</Link>
+  							</Grid>
+  							<Grid item>
+  								<Link href="https://t.me/sparkread" style={{ textDecoration: 'none' }}>
+    								<Button
+                        				className={classes.button}
+                        				color="inherit"
+                    					style={{color: '#283149'}}
+                        				endIcon={<SendIcon />}
+                        				variant="outlined"
+                    				>
+                    					Channel
+                    				</Button>
+                    			</Link>
+  							</Grid>
+						</Grid>
         			</div>
                 </Toolbar>
             </AppBar>
@@ -178,11 +194,11 @@ export default function Album() {
                                         </Typography>
                                     </CardContent>
                                     <CardActions style={{ alignItems: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
-                                        <Button variant="outlined" size="medium">
-                                            <Link href={club.link}>
-                                                View
-                                            </Link>
-                                        </Button>
+                                        <Link href={club.link} style={{ textDecoration: 'none' }}>
+                                        	<Button variant="outlined" size="medium">
+                    							View
+                							</Button>
+                						</Link>
                                     </CardActions>
                                 </Card>
                             </Grid>

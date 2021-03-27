@@ -22,7 +22,7 @@ import team from '../../src/team.json'
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="text.secondary" align="center">
+        <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
                 Your Website
@@ -114,7 +114,7 @@ export default function Album() {
                     	</SparkTextTypography>
                     </div>
                     <div style={{display: 'flex', alignItems: 'center'}}>
-                    	<Grid container spacing={1}>
+                    	<Grid container spacing={1} justify='center' direction='row'>
   							<Grid item>
   								<Link href="#About" style={{ textDecoration: 'none' }}>
     								<Button

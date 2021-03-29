@@ -148,40 +148,35 @@ export default function Album() {
             <main>
                 {/* Hero unit */}
                 <div className={classes.heroContent} style={{ background: '#1D4569' }}>
-                        <Grid container spacing={1} alignItems='center'>
-                            <Grid item justify='flex-start'>
-                                <Box order={1}>
-                                    <Container maxWidth='sm'>
-                                        <Typography
-                                            component="h1"
-                                            variant="h2"
-                                            style={{ color: '#ffffff' }}
-                                            gutterBottom
-                                        >
-                                            SparkRead
-                                        </Typography>
-                                        <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
-                                            SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
-                                        </Typography>
-                                        <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
-                                            Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
-                                        </Typography>
-                                    </Container>
-                                </Box>
-                            </Grid>
-                            <Box clone order={2}>
-                                <Grid item>
-                                    <Button
-                                        variant="contained"
-                                        color="black"
-                                        className={classes.button}
-                                        endIcon={<SendIcon>send</SendIcon>}
-                                    >
-                                        Send
-                                    </Button>
-                                </Grid>
-                            </Box>
+                    <Grid container spacing={1} alignItems='center' justify='space-around'>
+                        <Grid item xs={6}>
+                            <Typography
+                            	component="h1"
+                                variant="h2"
+                                style={{ color: '#ffffff' }}
+                                gutterBottom
+                            >
+                                SparkRead
+                            </Typography>
+                            <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
+                                SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
+                            </Typography>
+                            <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
+                                Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
+							</Typography>
                         </Grid>
+                        <Grid item xs={3}>
+                            <Button
+                            	size='large'
+                            	variant="contained"
+                                color="black"
+                                className={classes.button}
+                                endIcon={<SendIcon>send</SendIcon>}
+                            >
+                                Send
+						    </Button>
+                        </Grid>
+					</Grid>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}

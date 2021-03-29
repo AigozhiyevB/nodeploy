@@ -14,12 +14,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import { withStyles } from "@material-ui/core/styles";
-import { positions } from '@material-ui/system';
+import { borders } from '@material-ui/system';
 import SendIcon from '@material-ui/icons/Send';
+import clubs from '../../src/clubs.json'
+import team from '../../src/team.json'
+
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="text.secondary" align="center">
+        <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
                 Your Website
@@ -31,6 +34,9 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
+    root: {
+        background: '#dbedf3',
+    },
     icon: {
         marginRight: theme.spacing(2),
     },
@@ -44,17 +50,19 @@ const useStyles = makeStyles((theme) => ({
     cardGrid: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
+        alignItems: 'center',
     },
     card: {
         height: '100%',
         display: 'flex',
+        backgroundColor: '#dbedf3',
+        color: "#283149",
         flexDirection: 'column',
     },
     cardMedia: {
         paddingTop: '56.25%', // 16:9
     },
     cardContent: {
-    	alignItems: 'center',
         flexGrow: 1,
     },
     footer: {
@@ -63,7 +71,27 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const aboutStyle = makeStyles((theme) => ({
+    cardGrid: {
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
+        alignItems: 'stretch',
+    },
+    card: {
+        height: '100%',
+        display: 'flex',
+        backgroundColor: '#dbedf3',
+        color: "#283149",
+        flexDirection: 'column',
+    },
+    cardMedia: {
+        paddingTop: '100%',
+        borderRadius: '50%',
+    },
+    cardContent: {
+        flexGrow: 1,
+    },
+}));
 
 const SparkTextTypography = withStyles({
     root: {
@@ -73,33 +101,46 @@ const SparkTextTypography = withStyles({
 
 export default function Album() {
     const classes = useStyles();
-    
-	const clubs = require("../../src/clubs.json");
-	
-	// DEBUG
-	/*for (const i of clubs) {
-		console.log(i);
-	}*/
-	
+    const about = aboutStyle();
+
     return (
         <React.Fragment>
             <CssBaseline />
             <AppBar position="sticky" style={{ background: '#dbedf3' }}>
-                <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                <Toolbar style={{display: 'flex', WebkitBoxOrient: 'horizontal', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                     <div>
-                    	<SparkTextTypography style={{color: '#283149'}} variant="h6" noWrap>
+                    	<SparkTextTypography style={{color: '#283149'}} variant="h4" noWrap>
                         	<b>SparkRead</b>
                     	</SparkTextTypography>
                     </div>
-                    <div style={{display: 'flex', alignItems: 'center'}}>
-                    	<Button className={classes.button} color="inherit" style={{color: '#283149'}}>About Us</Button>
-                    	
-                    	<Button
-                        	className={classes.button}
-                        	endIcon={<SendIcon />}
-                    	>
-                        	Channel
-                    	</Button>
+                    <div style={{display: 'flex', display: '-webkit-box', WebkitBoxOrient: 'horizontal', alignItems: 'center', flexDirection: 'row'}}>
+                    	<Grid container spacing={1} justify='center' direction='row' style={{display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
+  							<Grid item>
+  								<Link href="#About" style={{ textDecoration: 'none' }}>
+    								<Button
+                    					className={classes.button}
+                    					color="inherit"
+                    					style={{color: '#283149'}}
+                    					variant="outlined"
+                    				>
+                    					About Us
+                    				</Button>
+                    			</Link>
+  							</Grid>
+  							<Grid item>
+  								<Link href="https://t.me/sparkread" style={{ textDecoration: 'none' }}>
+    								<Button
+                        				className={classes.button}
+                        				color="inherit"
+                    					style={{color: '#283149'}}
+                        				endIcon={<SendIcon />}
+                        				variant="outlined"
+                    				>
+                    					Channel
+                    				</Button>
+                    			</Link>
+  							</Grid>
+						</Grid>
         			</div>
                 </Toolbar>
             </AppBar>
@@ -125,17 +166,18 @@ export default function Album() {
                     </Container>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
+                    {/* End hero unit */}
                     <Grid container spacing={4}>
                         {clubs.map((club) => (
                             <Grid item key={club} xs={12} sm={6} md={4}>
-                                <Card className={classes.card} >
+                                <Card className={classes.card}>
                                     <CardMedia
                                         className={classes.cardMedia}
                                         image={club.image}
                                         title={club.name}
                                     />
-                                    <CardContent className={classes.cardContent} >
-                                        <Typography gutterBottom variant="h4" component="h2" style={{ textAlign: 'center' }} >
+                                    <CardContent className={classes.cardContent}>
+                                        <Typography gutterBottom variant="h4" component="h2" style={{ textAlign: 'center' }}>
                                             {club.name}
                                         </Typography>
                                         <Typography>
@@ -152,11 +194,11 @@ export default function Album() {
                                         </Typography>
                                     </CardContent>
                                     <CardActions style={{ alignItems: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
-                                        <Button variant="outlined" size="medium">
-                    						<Link href={club.link}>
+                                        <Link href={club.link} style={{ textDecoration: 'none' }}>
+                                        	<Button variant="outlined" size="medium">
                     							View
-                    						</Link>
-                						</Button>
+                							</Button>
+                						</Link>
                                     </CardActions>
                                 </Card>
                             </Grid>
@@ -165,17 +207,38 @@ export default function Album() {
                 </Container>
             </main>
             {/* Footer */}
-            <footer className={classes.footer}>
-                <Typography variant="h6" align="center" gutterBottom>
-                    About us
+            <footer className={classes.footer} id="About">
+                <Typography variant="h4" align="center" gutterBottom>
+                    <b>About us</b>
                 </Typography>
-                <Typography
-                    variant="subtitle1"
-                    align="center"
-                    color="textSecondary"
-                    component="p"
-                >
-                    Something here to give the footer a purpose!
+                <Container className={about.cardGrid} maxWidth="md">
+                    {/* End hero unit */}
+                    <Grid container spacing={4}
+                          justify="center"
+                          alignItems="stretch">
+                        {team.map((team) => (
+                            <Grid item key={team} xs={12} sm={6} md={3}>
+                                <Card className={about.card}>
+                                    <CardMedia
+                                        className={about.cardMedia}
+                                        image={team.image}
+                                        title={team.name}
+                                    />
+                                    <CardContent className={about.cardContent} style={{ textAlign: 'center' }}>
+                                        <Typography gutterBottom variant="h5" component="h2" >
+                                            <b>{team.name}</b>
+                                        </Typography>
+                                        <Typography>
+                                            {team.position}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Container>
+                <Typography>
+                    О нас в СМИ:
                 </Typography>
                 <Copyright />
             </footer>

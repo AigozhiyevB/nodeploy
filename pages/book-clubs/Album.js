@@ -114,8 +114,8 @@ export default function Album() {
                         	<b>SparkRead</b>
                     	</SparkTextTypography>
                     </div>
-                    <div style={{display: 'flex', alignItems: 'center'}}>
-                    	<Grid container spacing={1} justify='center' direction='row'>
+                    <div style={{display: 'flex', alignItems: 'center', display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
+                    	<Grid container spacing={1} justify='center' direction='row' style={{display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
   							<Grid item >
   								<Link href="#About" style={{ textDecoration: 'none' }}>
     								<Button

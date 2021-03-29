@@ -1,6 +1,7 @@
 import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -106,21 +107,21 @@ export default function Album() {
     return (
         <React.Fragment>
             <CssBaseline />
-            <AppBar position="sticky" style={{ background: '#dbedf3' }}>
-                <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
+            <AppBar position="sticky" style={{ background: '#1D4569' }}>
+                <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                     <div>
-                    	<SparkTextTypography style={{color: '#283149'}} variant="h4" noWrap>
+                    	<SparkTextTypography style={{color: '#ffffff'}} variant="h4" noWrap>
                         	<b>SparkRead</b>
                     	</SparkTextTypography>
                     </div>
-                    <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
-                    	<Grid container spacing={1} justify='center' direction='row' >
-  							<Grid item>
+                    <div style={{display: 'flex', alignItems: 'center'}}>
+                    	<Grid container spacing={1} justify='center' direction='row'>
+  							<Grid item >
   								<Link href="#About" style={{ textDecoration: 'none' }}>
     								<Button
                     					className={classes.button}
                     					color="inherit"
-                    					style={{color: '#283149'}}
+                    					style={{color: '#ffffff'}}
                     					variant="outlined"
                     				>
                     					About Us
@@ -132,7 +133,7 @@ export default function Album() {
     								<Button
                         				className={classes.button}
                         				color="inherit"
-                    					style={{color: '#283149'}}
+                    					style={{color: '#ffffff'}}
                         				endIcon={<SendIcon />}
                         				variant="outlined"
                     				>
@@ -146,24 +147,42 @@ export default function Album() {
             </AppBar>
             <main>
                 {/* Hero unit */}
-                <div className={classes.heroContent}>
-                    <Container maxWidth="sm">
-                        <Typography
-                            component="h1"
-                            variant="h2"
-                            align="center"
-                            color="textPrimary"
-                            gutterBottom
-                        >
-                            SparkRead
-                        </Typography>
-                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
-                        </Typography>
-                        <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                            Присоединяйся к книжным клубам, находи единомышленников или развивай своё сообщество.
-                        </Typography>
-                    </Container>
+                <div className={classes.heroContent} style={{ background: '#1D4569' }}>
+                        <Grid container spacing={1}>
+                            <Grid item justify='flex-start'>
+                                <Box order={1}>
+                                    <Container maxWidth='md'>
+                                        <Typography
+                                            component="h1"
+                                            variant="h2"
+                                            align="center"
+                                            style={{ color: '#ffffff' }}
+                                            gutterBottom
+                                        >
+                                            SparkRead
+                                        </Typography>
+                                        <Typography variant="h6" align="center" style={{ color: '#ffffff' }} paragraph>
+                                            SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
+                                        </Typography>
+                                        <Typography variant="h6" align="center" style={{ color: '#ffffff' }} paragraph>
+                                            Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
+                                        </Typography>
+                                    </Container>
+                                </Box>
+                            </Grid>
+                            <Box clone order={2}>
+                                <Grid item>
+                                    <Button
+                                        variant="contained"
+                                        color="black"
+                                        className={classes.button}
+                                        endIcon={<SendIcon>send</SendIcon>}
+                                    >
+                                        Send
+                                    </Button>
+                                </Grid>
+                            </Box>
+                        </Grid>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}

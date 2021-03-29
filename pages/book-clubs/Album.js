@@ -148,23 +148,22 @@ export default function Album() {
             <main>
                 {/* Hero unit */}
                 <div className={classes.heroContent} style={{ background: '#1D4569' }}>
-                        <Grid container spacing={1}>
+                        <Grid container spacing={1} alignItems='center'>
                             <Grid item justify='flex-start'>
                                 <Box order={1}>
-                                    <Container maxWidth='md'>
+                                    <Container maxWidth='sm'>
                                         <Typography
                                             component="h1"
                                             variant="h2"
-                                            align="center"
                                             style={{ color: '#ffffff' }}
                                             gutterBottom
                                         >
                                             SparkRead
                                         </Typography>
-                                        <Typography variant="h6" align="center" style={{ color: '#ffffff' }} paragraph>
+                                        <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
                                             SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
                                         </Typography>
-                                        <Typography variant="h6" align="center" style={{ color: '#ffffff' }} paragraph>
+                                        <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
                                             Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
                                         </Typography>
                                     </Container>

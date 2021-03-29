@@ -166,15 +166,17 @@ export default function Album() {
 							</Typography>
                         </Grid>
                         <Grid item xs={3}>
-                            <Button
-                            	size='large'
-                            	variant="contained"
-                                color="black"
-                                className={classes.button}
-                                endIcon={<SendIcon>send</SendIcon>}
-                            >
-                                Send
-						    </Button>
+                            <Link href="https://t.me/sparkread" style={{ textDecoration: 'none' }}>
+                                <Button
+                                    size='large'
+                                    variant="contained"
+                                    color="black"
+                                    className={classes.button}
+                                    endIcon={<SendIcon>send</SendIcon>}
+                                >
+                                    Channel
+                                </Button>
+                            </Link>
                         </Grid>
 					</Grid>
                 </div>

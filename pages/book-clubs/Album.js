@@ -107,14 +107,14 @@ export default function Album() {
         <React.Fragment>
             <CssBaseline />
             <AppBar position="sticky" style={{ background: '#dbedf3' }}>
-                <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexDirection: 'row'}}>
                     <div>
                     	<SparkTextTypography style={{color: '#283149'}} variant="h4" noWrap>
                         	<b>SparkRead</b>
                     	</SparkTextTypography>
                     </div>
-                    <div style={{display: 'flex', alignItems: 'center'}}>
-                    	<Grid container spacing={1} justify='center' direction='row'>
+                    <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                    	<Grid container spacing={1} justify='center' direction='row' >
   							<Grid item>
   								<Link href="#About" style={{ textDecoration: 'none' }}>
     								<Button

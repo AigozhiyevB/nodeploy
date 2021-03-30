@@ -19,7 +19,18 @@ import { borders } from '@material-ui/system';
 import SendIcon from '@material-ui/icons/Send';
 import clubs from '../../src/clubs.json'
 import team from '../../src/team.json'
+import Head from "next/head";
 
+function IndexPage() {
+    return (
+        <div>
+            <Head>
+                <title>SparkRead</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
+        </div>
+    )
+}
 
 function Copyright() {
     return (
@@ -107,6 +118,7 @@ export default function Album() {
 
     return (
         <React.Fragment>
+            <IndexPage />
             <CssBaseline />
             <AppBar position="sticky" style={{ background: '#1D4569' }}>
                 <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -245,12 +257,19 @@ export default function Album() {
             </main>
             {/* Footer */}
             <footer className={classes.footer} id="About">
-                <Typography variant="h4" align="center" gutterBottom>
-                    <b>Наша команда</b>
-                </Typography>
-                <Typography variant="h5" align="center" gutterBottom>
-                    Мы студенты 3 курса ФИВТ МФТИ. Разрабатываем проект в рамках Стартап-Преакселератора ФПМИ.
-                </Typography>
+                <Container className={about.cardGrid} maxWidth="sm">
+                    <Typography variant="h4" align="center" gutterBottom>
+                        <b>Наша команда</b>
+                    </Typography>
+                    <Typography variant="h5" align="center" gutterBottom >
+                        Проект разрабатывается студентами 3 курса ФИВТ МФТИ.
+                        На данный момент сотрудничаем с 30+ клубами по всему миру.
+                        Хотите опубликовать мероприятие Вашего клуба?
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdBn630iN83wv9MAvY5qNhv9xojrmeTVnxf5y0JWckuBq5xrA/viewform">
+                            Заполняйте форму.
+                        </Link>
+                    </Typography>
+                </Container>
                 <Container className={about.cardGrid} maxWidth="md">
                     {/* End hero unit */}
                     <Grid justify='space-between'>

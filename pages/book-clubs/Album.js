@@ -26,7 +26,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+                Material UI
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -149,7 +149,7 @@ export default function Album() {
             <main style={{ background: '#dbedf3' }}>
                 {/* Hero unit */}
                 <div className={classes.heroContent} style={{ background: '#1D4569' }}>
-                    <Grid container spacing={1} alignItems='center' justify='space-around'>
+                    <Grid container alignItems='center' justify='space-around'>
                         <Grid item xs={6}>
                             <Typography
                             	component="h1"
@@ -171,7 +171,7 @@ export default function Album() {
                                 <Button
                                     size='large'
                                     variant="contained"
-                                    color="black"
+                                    style={{background: '#dbedf3'}}
                                     className={classes.button}
                                     endIcon={<SendIcon>send</SendIcon>}
                                 >
@@ -181,7 +181,7 @@ export default function Album() {
                         </Grid>
 					</Grid>
                 </div>
-                <Container className={classes.cardGrid} maxWidth="md">
+                <Container className={classes.cardGrid} maxWidth="md" alignItems='center'>
                     {/* End hero unit */}
                     <Box p={3}>
                         <Typography align='center' variant='h3' style={{color: "#283149"}}>
@@ -216,8 +216,10 @@ export default function Album() {
                                     </CardContent>
                                     <CardActions style={{ alignItems: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
                                         <Link href={club.link} style={{ textDecoration: 'none' }}>
-                                        	<Button variant="outlined" size="medium">
-                    							View
+                                        	<Button variant="outlined"
+                                                    style={{background: '#1D4569', color: '#ffffff'}}
+                                                    size="medium">
+                    							Подробнее
                 							</Button>
                 						</Link>
                                     </CardActions>
@@ -225,49 +227,96 @@ export default function Album() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box p={3}>
-                        <Link href='https://t.me/sparkread'>
-                            <Typography align='center' variant='h4' style={{color: "#283149"}}>
-                                Встречи клубов в этом месяце
-                            </Typography>
+                    <Box p={8}>
+                    <Grid container alignItems='center' justify='center'>
+                        <Link href='https://t.me/sparkread' style={{ textDecoration: 'none' }}>
+                            <Button
+                                size='large'
+                                variant="contained"
+                                style={{background: '#1D4569', color: '#ffffff'}}
+                                className={classes.button}
+                            >
+                                Все клубы
+                            </Button>
                         </Link>
+                    </Grid>
                     </Box>
                 </Container>
             </main>
             {/* Footer */}
             <footer className={classes.footer} id="About">
                 <Typography variant="h4" align="center" gutterBottom>
-                    <b>About us</b>
+                    <b>Наша команда</b>
+                </Typography>
+                <Typography variant="h5" align="center" gutterBottom>
+                    Мы студенты 3 курса ФИВТ МФТИ. Разрабатываем проект в рамках Стартап-Преакселератора ФПМИ.
                 </Typography>
                 <Container className={about.cardGrid} maxWidth="md">
                     {/* End hero unit */}
-                    <Grid container spacing={4}
-                          justify="center"
-                          alignItems="stretch">
-                        {team.map((team) => (
-                            <Grid item key={team} xs={12} sm={6} md={3}>
-                                <Card className={about.card}>
-                                    <CardMedia
-                                        className={about.cardMedia}
-                                        image={team.image}
-                                        title={team.name}
-                                    />
-                                    <CardContent className={about.cardContent} style={{ textAlign: 'center' }}>
-                                        <Typography gutterBottom variant="h5" component="h2" >
-                                            <b>{team.name}</b>
-                                        </Typography>
-                                        <Typography>
-                                            {team.position}
-                                        </Typography>
-                                    </CardContent>
-                                </Card>
+                    <Grid justify='space-between'>
+                        <Grid item>
+                            <Grid container spacing={4}
+                                  justify="center"
+                                  alignItems="stretch">
+                                {team.map((team) => (
+                                    <Grid item key={team} xs={6} sm={6} md={3}>
+                                        <Card className={about.card}>
+                                            <CardMedia
+                                                className={about.cardMedia}
+                                                image={team.image}
+                                                title={team.name}
+                                            />
+                                            <CardContent className={about.cardContent} style={{ textAlign: 'center' }}>
+                                                <Typography gutterBottom variant="h5" component="h2" >
+                                                    <b>{team.lastname}</b>
+                                                </Typography>
+                                                <Typography gutterBottom variant="h5" component="h2" >
+                                                    <b>{team.name}</b>
+                                                </Typography>
+                                                <Typography>
+                                                    {team.position}
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                    </Grid>
+                                ))}
                             </Grid>
-                        ))}
+                        </Grid>
+                        <Grid item>
+                            <Grid container alignItems='center' justify='space-around'>
+                                <Grid item>
+                                    <Box p={5}>
+                                        <Link href="https://knife.media/book-club-tg/" style={{ textDecoration: 'none' }}>
+                                            <Button
+                                                size='large'
+                                                variant="contained"
+                                                style={{background: '#1D4569', color: '#ffffff'}}
+                                                className={classes.button}
+                                            >
+                                                Статья о нас
+                                            </Button>
+                                        </Link>
+                                    </Box>
+                                </Grid>
+                                <Grid item>
+                                    <Box p={5}>
+                                        <Link href="https://t.me/BogdanSemenov" style={{ textDecoration: 'none' }}>
+                                            <Button
+                                                size='large'
+                                                variant="contained"
+                                                style={{background: '#1D4569', color: '#ffffff'}}
+                                                className={classes.button}
+                                            >
+                                                Свяжитесь с нами
+                                            </Button>
+                                        </Link>
+                                    </Box>
+                                </Grid>
+                            </Grid>
+                        </Grid>
                     </Grid>
+
                 </Container>
-                <Typography>
-                    О нас в СМИ:
-                </Typography>
                 <Copyright />
             </footer>
             {/* End footer */}

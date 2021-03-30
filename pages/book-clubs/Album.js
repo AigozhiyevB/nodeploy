@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: theme.spacing(4),
     },
     cardGrid: {
+        backgroundColor: '#dbedf3',
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
         alignItems: 'center',
@@ -114,7 +115,7 @@ export default function Album() {
                         	<b>SparkRead</b>
                     	</SparkTextTypography>
                     </div>
-                    <div style={{display: 'flex', alignItems: 'center', display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
+                    <div style={{display: 'flex', alignItems: 'center', WebkitBoxOrient: 'horizontal'}}>
                     	<Grid container spacing={1} justify='center' direction='row' style={{display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
   							<Grid item >
   								<Link href="#About" style={{ textDecoration: 'none' }}>
@@ -145,7 +146,7 @@ export default function Album() {
         			</div>
                 </Toolbar>
             </AppBar>
-            <main>
+            <main style={{ background: '#dbedf3' }}>
                 {/* Hero unit */}
                 <div className={classes.heroContent} style={{ background: '#1D4569' }}>
                     <Grid container spacing={1} alignItems='center' justify='space-around'>
@@ -182,6 +183,11 @@ export default function Album() {
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
                     {/* End hero unit */}
+                    <Box p={3}>
+                        <Typography align='center' variant='h3' style={{color: "#283149"}}>
+                            Встречи клубов в этом месяце
+                        </Typography>
+                    </Box>
                     <Grid container spacing={4}>
                         {clubs.map((club) => (
                             <Grid item key={club} xs={12} sm={6} md={4}>
@@ -219,6 +225,13 @@ export default function Album() {
                             </Grid>
                         ))}
                     </Grid>
+                    <Box p={3}>
+                        <Link href='https://t.me/sparkread'>
+                            <Typography align='center' variant='h4' style={{color: "#283149"}}>
+                                Встречи клубов в этом месяце
+                            </Typography>
+                        </Link>
+                    </Box>
                 </Container>
             </main>
             {/* Footer */}

@@ -112,7 +112,7 @@ const SparkTextTypography = withStyles({
   }
 })(Typography);
 
-export default function Album() {
+export default function Clubs() {
   const classes = useStyles();
   const about = aboutStyle();
 
@@ -124,7 +124,9 @@ export default function Album() {
           <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
             <div>
               <SparkTextTypography style={{color: '#ffffff'}} variant="h4" noWrap>
-                <b>SparkRead</b>
+                <Link href="/" style={{ textDecoration: 'none', color: '#ffffff' }}>
+                  <b>SparkRead</b>
+                </Link>
               </SparkTextTypography>
             </div>
             <div style={{display: 'flex', alignItems: 'center', WebkitBoxOrient: 'horizontal'}}>
@@ -252,7 +254,7 @@ export default function Album() {
             </Grid>
             <Box p={8}>
               <Grid container alignItems='center' justify='center'>
-                <Link href='https://t.me/sparkread' style={{ textDecoration: 'none' }}>
+                <Link href='/book-clubs/clubs' style={{ textDecoration: 'none' }}>
                   <Button
                       size='large'
                       variant="contained"

@@ -123,75 +123,86 @@ export default function Album() {
             <AppBar position="sticky" style={{ background: '#1D4569' }}>
                 <Toolbar style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
                     <div>
-                    	<SparkTextTypography style={{color: '#ffffff'}} variant="h4" noWrap>
-                        	<b>SparkRead</b>
-                    	</SparkTextTypography>
+                        <SparkTextTypography style={{color: '#ffffff'}} variant="h4" noWrap>
+                            <b>SparkRead</b>
+                        </SparkTextTypography>
                     </div>
                     <div style={{display: 'flex', alignItems: 'center', WebkitBoxOrient: 'horizontal'}}>
-                    	<Grid container spacing={1} justify='center' direction='row' style={{display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
-  							<Grid item >
-  								<Link href="#About" style={{ textDecoration: 'none' }}>
-    								<Button
-                    					className={classes.button}
-                    					color="inherit"
-                    					style={{color: '#ffffff'}}
-                    					variant="outlined"
-                    				>
-                    					About Us
-                    				</Button>
-                    			</Link>
-  							</Grid>
-  							<Grid item>
-  								<Link href="https://t.me/sparkread" style={{ textDecoration: 'none' }}>
-    								<Button
-                        				className={classes.button}
-                        				color="inherit"
-                    					style={{color: '#ffffff'}}
-                        				endIcon={<SendIcon />}
-                        				variant="outlined"
-                    				>
-                    					Channel
-                    				</Button>
-                    			</Link>
-  							</Grid>
-						</Grid>
-        			</div>
+                        <Grid container spacing={1} justify='center' direction='row' style={{display: '-webkit-box', WebkitBoxOrient: 'horizontal'}}>
+                            <Grid item >
+                                <Link href="#About" style={{ textDecoration: 'none' }}>
+                                    <Button
+                                        className={classes.button}
+                                        color="inherit"
+                                        style={{color: '#ffffff'}}
+                                        variant="outlined"
+                                    >
+                                        About Us
+                                    </Button>
+                                </Link>
+                            </Grid>
+                            <Grid item>
+                                <Link href="https://t.me/sparkread" style={{ textDecoration: 'none' }}>
+                                    <Button
+                                        className={classes.button}
+                                        color="inherit"
+                                        style={{color: '#ffffff'}}
+                                        endIcon={<SendIcon />}
+                                        variant="outlined"
+                                    >
+                                        Channel
+                                    </Button>
+                                </Link>
+                            </Grid>
+                        </Grid>
+                    </div>
                 </Toolbar>
             </AppBar>
             <main style={{ background: '#dbedf3' }}>
                 {/* Hero unit */}
-                <div className={classes.heroContent} style={{ background: '#1D4569' }}>
-                    <Grid container alignItems='center' justify='space-around'>
-                        <Grid item xs={6}>
-                            <Typography
-                            	component="h1"
-                                variant="h2"
-                                style={{ color: '#ffffff' }}
-                                gutterBottom
-                            >
-                                SparkRead
-                            </Typography>
-                            <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
-                                SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
-                            </Typography>
-                            <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
-                                Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
-							</Typography>
+                <div className={classes.heroContent} style={{ background: '#1D4569', height: '100vh'}}>
+                    <Grid container justify='center' alignItems='space-between' direction='column'>
+                        <Grid item>
+                            <Grid container xs={12} alignItems='center' justify='space-around'>
+                                <Grid item xs={5}>
+                                    <Typography
+                                        component="h1"
+                                        variant="h2"
+                                        style={{ color: '#ffffff' }}
+                                        gutterBottom
+                                    >
+                                        SparkRead
+                                    </Typography>
+                                    <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
+                                        SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
+                                    </Typography>
+                                    <Typography variant="h6" style={{ color: '#ffffff' }} paragraph>
+                                        Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={3}>
+                                    <Button
+                                        size='large'
+                                        variant="contained"
+                                        style={{backgroung: '#dbedf3'}}
+                                        className={classes.button}
+                                        endIcon={<SendIcon/>}
+                                    >
+                                        Channel
+                                    </Button>
+                                </Grid>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={3}>
-                            <Link href="https://t.me/sparkread" style={{ textDecoration: 'none' }}>
-                                <Button
-                                    size='large'
-                                    variant="contained"
-                                    style={{background: '#dbedf3'}}
-                                    className={classes.button}
-                                    endIcon={<SendIcon>send</SendIcon>}
-                                >
-                                    Channel
-                                </Button>
-                            </Link>
+                        <Grid item>
+                            <Grid container justify='center' alignItems='flex-start'>
+                                <Grid item>
+                                    <Box p={0}>
+                                        <img src={'https://psv4.userapi.com/c534536/u322472089/docs/d28/690f86f2131e/book.png?extra=wIMJvuPFi5ByzVHX8r9S6kIGl2SheiuwhPnuxXoQv7nW7PQcFmiMKTVyxZPJSl6TCLKVVESejRu-ZlhLN3r1qs83NPELtBKLXWGUGLwlO_wDr2REG9gVSt60hKufOdWrpLM5yQlP83p8wLc20aMUMLc'} alt="book" />
+                                    </Box>
+                                </Grid>
+                            </Grid>
                         </Grid>
-					</Grid>
+                    </Grid>
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md" alignItems='center'>
                     {/* End hero unit */}
@@ -228,30 +239,30 @@ export default function Album() {
                                     </CardContent>
                                     <CardActions style={{ alignItems: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
                                         <Link href={club.link} style={{ textDecoration: 'none' }}>
-                                        	<Button variant="outlined"
+                                            <Button variant="outlined"
                                                     style={{background: '#1D4569', color: '#ffffff'}}
                                                     size="medium">
-                    							Подробнее
-                							</Button>
-                						</Link>
+                                                Подробнее
+                                            </Button>
+                                        </Link>
                                     </CardActions>
                                 </Card>
                             </Grid>
                         ))}
                     </Grid>
                     <Box p={8}>
-                    <Grid container alignItems='center' justify='center'>
-                        <Link href='https://t.me/sparkread' style={{ textDecoration: 'none' }}>
-                            <Button
-                                size='large'
-                                variant="contained"
-                                style={{background: '#1D4569', color: '#ffffff'}}
-                                className={classes.button}
-                            >
-                                Все клубы
-                            </Button>
-                        </Link>
-                    </Grid>
+                        <Grid container alignItems='center' justify='center'>
+                            <Link href='https://t.me/sparkread' style={{ textDecoration: 'none' }}>
+                                <Button
+                                    size='large'
+                                    variant="contained"
+                                    style={{background: '#1D4569', color: '#ffffff'}}
+                                    className={classes.button}
+                                >
+                                    Все клубы
+                                </Button>
+                            </Link>
+                        </Grid>
                     </Box>
                 </Container>
             </main>

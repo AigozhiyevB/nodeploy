@@ -17,6 +17,12 @@ import Link from '@material-ui/core/Link';
 import { withStyles } from '@material-ui/core/styles';
 import { borders } from '@material-ui/system';
 import SendIcon from '@material-ui/icons/Send';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import IconButton from '@material-ui/core/IconButton';
+import InfoIcon from '@material-ui/icons/Info';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 import clubs from '../../src/clubs.json'
 import clubs_online from '../../src/clubs-online-coming.json'
 import clubs_offline from '../../src/clubs-offline-coming.json'
@@ -24,6 +30,7 @@ import clubs_free from '../../src/clubs-free-coming.json'
 import clubs_paid from '../../src/clubs-paid-coming.json'
 import team from '../../src/team.json'
 import Head from 'next/head';
+import Carousel from './Carousel.js';
 
 function IndexPage() {
     return (
@@ -48,6 +55,122 @@ function Copyright() {
         </Typography>
     );
 }
+
+function Carousel2(clubs) {
+  const classes = listStyles();
+  const clubsClasses = useStyles();
+
+  return (
+    <div className={classes.root} style={{ scrollbarColor: 'transparent' }}>
+      <GridList
+          className={classes.gridList}
+          cols={4.5}
+          spacing={4}
+          cellHeight='auto'
+          style={{ scrollbarColor: 'transparent', alignItems: 'stretch' }}
+      >
+        {clubs.map((club) => (
+          <GridListTile key={club.image} style={{ alignItems: 'stretch' }}>
+            <Grid item key={club}>
+                                <Card className={clubsClasses.card} variant='outlined'>
+                                    <CardMedia
+                                        className={clubsClasses.cardMedia}
+                                        image={club.image}
+                                        title={club.name}
+                                    />
+                                    <CardContent className={clubsClasses.cardContent} style={{ textAlign: 'center' }}>
+                                        {/*<img src={club.image} height='250px' width='100%'/>*/}
+                                        <Typography gutterBottom variant='h4' component='h2'>
+                                            {club.name}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Адрес: `}</b> {club.address}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Стоимость: `}</b> {club.price}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Дата встречи: `}</b> {club.meeting_date}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Текущая книга: `}</b> {club.book}
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions style={{ alignItems: 'center', marginLeft: 'auto', marginRight: 'auto'}}>
+                                        <Link href={club.link} style={{ textDecoration: 'none' }}>
+                                            <Button variant='outlined'
+                                                    style={{background: '#1D4569', color: '#ffffff'}}
+                                                    size='medium'>
+                                                Подробнее
+                                            </Button>
+                                        </Link>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                            {/*<img src={club.image} />
+                                <GridListTileBar
+                                  title={club.name}
+                                  subtitle={<><Typography gutterBottom variant='h4' component='h2' style={{ textAlign: 'center' }}>
+                                                {club.name}
+                                            </Typography>
+                                            <Typography>
+                                                <b>{`Адрес: `}</b> {club.address}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Стоимость: `}</b> {club.price}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Дата встречи: `}</b> {club.meeting_date}
+                                        </Typography>
+                                        <Typography>
+                                            <b>{`Текущая книга: `}</b> {club.book}
+                                        </Typography></>}
+                                  actionIcon={
+                                    <IconButton aria-label={`info about ${club.name}`} className={classes.icon}>
+                                      <InfoIcon />
+                                    </IconButton>
+                                  }
+                                />*/}
+            {/*<img src={club.image} alt={club.name} />
+            <GridListTileBar
+              title={club.name}
+              classes={{
+                root: classes.titleBar,
+                title: classes.title,
+              }}
+              actionIcon={
+                <IconButton aria-label={`star ${club.name}`}>
+                  <StarBorderIcon className={classes.title} />
+                </IconButton>
+              }
+            />*/}
+          </GridListTile>
+        ))}
+      </GridList>
+    </div>
+  );
+}
+
+const listStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    flexWrap: 'nowrap',
+    transform: 'translateZ(0)',
+  },
+  title: {
+    color: theme.palette.primary.light,
+  },
+  titleBar: {
+    transparency: '0',
+    background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+  },
+}));
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -119,6 +242,7 @@ const SparkTextTypography = withStyles({
 export default function Clubs() {
     const classes = useStyles();
     const about = aboutStyle();
+    //const list = listStyle();
     
     let isMobile = true;
 
@@ -179,11 +303,13 @@ export default function Clubs() {
                 </Toolbar>
             </AppBar>
             <main style={{ background: '#dbedf3' }}>
+                <br/><br/><br/>
+                {Carousel(clubs_online)}
                 {/* Hero unit */}
                 <Container className={classes.cardGrid} maxWidth='md' align='center'>
                     {/* End hero unit */}
                     <Box p={3}>
-                        <Typography align='center' variant='h3' style={{color: '#283149'}}>
+                        <Typography align='center' variant='h3' style={{ color: '#283149' }}>
                             Онлайн встречи клубов в этом месяце
                         </Typography>
                     </Box>

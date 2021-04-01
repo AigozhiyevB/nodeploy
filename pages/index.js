@@ -187,7 +187,7 @@ export default function Clubs() {
                 		<Grid item>
                     		<Grid container
                     			spacing={isMobile ? 0 : 0}
-                    			align='center'
+                    			alignItems='center'
                     			justify='space-between'
                     			direction={isMobile ? 'column' : 'row'}
                     			style={{
@@ -315,6 +315,7 @@ export default function Clubs() {
               Проект разрабатывается студентами 3 курса ФИВТ МФТИ.
               На данный момент сотрудничаем с 30+ клубами по всему миру.
               Хотите опубликовать мероприятие Вашего клуба?
+              <br/>
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdBn630iN83wv9MAvY5qNhv9xojrmeTVnxf5y0JWckuBq5xrA/viewform">
                 Заполняйте форму.
               </Link>

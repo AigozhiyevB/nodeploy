@@ -7,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Image from "next/image";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -199,7 +200,7 @@ export default function Clubs() {
                 <Grid container justify='center' alignItems='flex-start'>
                   <Grid item>
                     <Box p={0}>
-                      <img src={'https://psv4.userapi.com/c534536/u322472089/docs/d28/690f86f2131e/book.png?extra=wIMJvuPFi5ByzVHX8r9S6kIGl2SheiuwhPnuxXoQv7nW7PQcFmiMKTVyxZPJSl6TCLKVVESejRu-ZlhLN3r1qs83NPELtBKLXWGUGLwlO_wDr2REG9gVSt60hKufOdWrpLM5yQlP83p8wLc20aMUMLc'} alt="book" />
+                      <img src={'https://psv4.userapi.com/c534536/u322472089/docs/d28/b5a034205571/book.png?extra=V0ri8pSlWcfeHcPGcLsfpaUZFoc1AXO-Lu60lIAVENJgaiBN1xvLNirxFO1KS_QgI1hR54sjBzQb8YY-E8kmMnnMGvIjvqNdClImMlfEzK0Y4Tpmc8r_HFtU9L85QcuFg3u4FpR7wgDxzhNJVrEVcCU'} alt="book" />
                     </Box>
                   </Grid>
                 </Grid>

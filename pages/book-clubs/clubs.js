@@ -212,20 +212,6 @@ export default function Clubs() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box p={8}>
-                        <Grid container alignItems='center' justify='center'>
-                            <Link href='/book-clubs/Album' style={{ textDecoration: 'none' }}>
-                                <Button
-                                    size='large'
-                                    variant="contained"
-                                    style={{background: '#1D4569', color: '#ffffff'}}
-                                    className={classes.button}
-                                >
-                                    Все онлайн клубы
-                                </Button>
-                            </Link>
-                        </Grid>
-                    </Box>
                 </Container>
                 <Container className={classes.cardGrid} maxWidth="md" alignItems='center'>
                     {/* End hero unit */}
@@ -273,20 +259,6 @@ export default function Clubs() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box p={8}>
-                        <Grid container alignItems='center' justify='center'>
-                            <Link href='/book-clubs/Album' style={{ textDecoration: 'none' }}>
-                                <Button
-                                    size='large'
-                                    variant="contained"
-                                    style={{background: '#1D4569', color: '#ffffff'}}
-                                    className={classes.button}
-                                >
-                                    Все оффлайн клубы
-                                </Button>
-                            </Link>
-                        </Grid>
-                    </Box>
                 </Container>
                 <Container className={classes.cardGrid} maxWidth="md" alignItems='center'>
                     {/* End hero unit */}
@@ -334,20 +306,6 @@ export default function Clubs() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box p={8}>
-                        <Grid container alignItems='center' justify='center'>
-                            <Link href='/book-clubs/Album' style={{ textDecoration: 'none' }}>
-                                <Button
-                                    size='large'
-                                    variant="contained"
-                                    style={{background: '#1D4569', color: '#ffffff'}}
-                                    className={classes.button}
-                                >
-                                    Все бесплатные клубы
-                                </Button>
-                            </Link>
-                        </Grid>
-                    </Box>
                 </Container>
                 <Container className={classes.cardGrid} maxWidth="md" alignItems='center'>
                     {/* End hero unit */}
@@ -395,20 +353,6 @@ export default function Clubs() {
                             </Grid>
                         ))}
                     </Grid>
-                    <Box p={8}>
-                        <Grid container alignItems='center' justify='center'>
-                            <Link href='/book-clubs/Album' style={{ textDecoration: 'none' }}>
-                                <Button
-                                    size='large'
-                                    variant="contained"
-                                    style={{background: '#1D4569', color: '#ffffff'}}
-                                    className={classes.button}
-                                >
-                                    Все платные клубы
-                                </Button>
-                            </Link>
-                        </Grid>
-                    </Box>
                 </Container>
             </main>
             {/* Footer */}

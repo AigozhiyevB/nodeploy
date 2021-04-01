@@ -129,9 +129,11 @@ export default function Clubs() {
             <AppBar position='sticky' style={{ background: '#1D4569' }}>
                 <Toolbar style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div>
-                        <SparkTextTypography style={{ color: '#ffffff' }} variant={isMobile ? 'h6' : 'h4'} noWrap>
-                            <b>SparkRead</b>
-                        </SparkTextTypography>
+                        <Link href='/' style={{ textDecoration: 'none' }}>
+                        	<SparkTextTypography style={{ color: '#ffffff' }} variant={isMobile ? 'h5' : 'h4'} noWrap>
+                            	<b>SparkRead</b>
+                        	</SparkTextTypography>
+                    	</Link>
                     </div>
                     <div style={{
                         alignItems: 'center',
@@ -178,71 +180,7 @@ export default function Clubs() {
             </AppBar>
             <main style={{ background: '#dbedf3' }}>
                 {/* Hero unit */}
-                <div className={classes.heroContent} style={{ background: '#1D4569' }}>
-                    <Grid container
-                        justify='space-between'
-                        alignItems='center'
-                        direction={'column'}
-                    >
-                        <Grid item>
-                            <Grid container
-                                spacing={isMobile ? 0 : 0}
-                                alignItems='center'
-                                justify='space-between'
-                                direction={isMobile ? 'column' : 'row'}
-                                style={{
-                                    display: 'flex',
-                                    WebkitDisplay: '-webkit-box',
-                                    WebkitBoxOrient: (isMobile ? 'vertical' : 'horizontal') }}
-                            >
-                                <Grid item
-                                    xs={isMobile ? 10 : 5}
-                                    style={{
-                                        textAlign: (isMobile ? 'center' : 'left'),
-                                        WebkitTextAlign: (isMobile ? '-webkit-center' : '-webkit-left')
-                                    }}
-                                >
-                                    <Typography
-                                        component='h1'
-                                        variant='h2'
-                                        style={{ color: '#ffffff' }}
-                                        gutterBottom
-                                    >
-                                        {'SparkRead'}
-                                    </Typography>
-                                    <Typography variant='h6' style={{ color: '#ffffff' }} paragraph>
-                                        SparkRead - агрегатор книжных клубов как в онлайн-, так и в оффлайн-формате, созданный студентами МФТИ.
-                                    </Typography>
-                                    <Typography variant='h6' style={{ color: '#ffffff' }} paragraph>
-                                        Наша миссия заключается в объединении людей по всему миру посредством чтения и обсуждения книг.
-                                    </Typography>
-                                </Grid>
-                                <Grid item xs={isMobile ? 12 : 3}>
-                                    <Link href='https://t.me/sparkread' style={{ textDecoration: 'none' }}>
-                                        <Button
-                                            size='large'
-                                            variant='contained'
-                                            style={{ backgroung: '#dbedf3' }}
-                                            className={classes.button}
-                                            endIcon={<SendIcon/>}
-                                        >
-                                            Channel
-                                        </Button>
-                                    </Link>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                        <br/><br/>
-                        <Grid item>
-                            <Grid container justify='center' alignItems='flex-end'>
-                                <Grid item>
-                                    <img src={'https://psv4.userapi.com/c534536/u322472089/docs/d28/ab2787a994b7/book.png?extra=vBJq1j0lTxnC3G_VDMFcnCQjIDjEwDJudvHjREpEe7Dmd67DpuM9UnxGjnWh9_H21oooYii2y6gt5hKqygZDxKrEhazHhrY5YpR30aQXXrNCFbQVKBo5dktDhFQCNJJQ2jgyLrlMRyrhR9pMavf1Tz4'} alt='book' style={{ width: '100%', height: 'auto' }} />
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </div>
-                <Container className={classes.cardGrid} maxWidth='md' alignItems='center'>
+                <Container className={classes.cardGrid} maxWidth='md' align='center'>
                     {/* End hero unit */}
                     <Box p={3}>
                         <Typography align='center' variant='h3' style={{color: '#283149'}}>

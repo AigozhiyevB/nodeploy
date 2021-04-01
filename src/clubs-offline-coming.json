@@ -25,5 +25,49 @@
     "book": "Пятьдесят лет любви",
     "price": "Бесплатно",
     "image": "https://sun9-14.userapi.com/impf/c824600/v824600190/137fb9/maJeUPX4hUU.jpg?size=653x770&quality=96&sign=20b759596ba6a000f38f0178bee2fddd&type=album"
+  },
+  {
+    "name": "Студенческий книжный клуб ВЕИП",
+    "address": "ZOOM",
+    "link": "https://t.me/sparkread/31",
+    "meeting_date": "09-04-2021 17:00",
+    "book": "Пропавшая весной",
+    "price": "Бесплатно",
+    "image": "https://sun9-12.userapi.com/impf/c627930/v627930886/1bdf8/LBv2iNZS9FY.jpg?size=555x800&quality=96&sign=ca53014b20822c108be5e092a4f39447&type=album"
+  },
+  {
+    "name": "Books Events",
+    "address": "Кафе и антикафе в центре Москвы",
+    "link": "https://t.me/sparkread/35",
+    "meeting_date": "11-04-2021",
+    "book": "Цитадель",
+    "price": "500 рублей; для обладателей карточек Books Events — 350 рублей",
+    "image": "https://sun9-68.userapi.com/impf/c831109/v831109346/756d3/TGW5tt31Zs4.jpg?size=600x600&quality=96&sign=3cf6980e49be5678d40874c064285ce8&type=album"
+  },
+  {
+    "name": "Премиальная литература",
+    "address": "Книжный магазин \"Пиотровский\" в Ельцин-центре (г.Екатеринбург)",
+    "link": "https://t.me/sparkread/59",
+    "meeting_date": "13-04-2021 18:00",
+    "book": "ВонгОзеро\nНепосредственный человек\nОливия Киттеридж",
+    "price": "Бесплатно",
+    "image": "https://sun9-55.userapi.com/impg/c850416/v850416851/15c9cf/nHi-C0jdXAM.jpg?size=1200x750&quality=96&sign=7a3308d4da9c9a225ad1523d70656275&type=album"
+  },
+  {
+    "name": "Cover by Cover",
+    "address": "Москва, место встречи объявляется накануне",
+    "link": "https://t.me/sparkread/34",
+    "meeting_date": "14-04-2021",
+    "book": "Договориться можно обо всем",
+    "image": "https://sun9-40.userapi.com/impg/Dn26HyjK-TcfDlZREXZFmqGRQ2-yBMHrotVPtg/nAQpxlZq0SQ.jpg?size=1024x683&quality=96&sign=a1f098e56d2ab8e90f177d4dd66c1283&type=album"
+  },
+  {
+    "name": "Книголюбы",
+    "address": "г. Железнодорожный, Московской области\n",
+    "link": "https://t.me/sparkread/64",
+    "meeting_date": "23-04-2021 18:00",
+    "book": "Оправдание острова",
+    "price": "300 руб",
+    "image": "https://sun9-59.userapi.com/impg/c855420/v855420254/17ed52/6IVYiaZDyKs.jpg?size=600x900&quality=96&sign=03126e34a53131592a78a63b5ca45086&type=album"
   }
 ]

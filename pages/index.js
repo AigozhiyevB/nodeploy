@@ -325,11 +325,11 @@ export default function Clubs() {
             {/* End hero unit */}
             <Grid justify='space-between'>
               <Grid item>
-                <Grid container spacing={4}
+                <Grid container spacing={3}
                       justify="center"
                       alignItems="stretch">
                   {team.map((team) => (
-                      <Grid item key={team} xs={6} sm={6} md={3}>
+                      <Grid item key={team} xs={8} sm={6} md={4}>
                         <Card className={about.card}>
                           <CardMedia
                               className={about.cardMedia}
